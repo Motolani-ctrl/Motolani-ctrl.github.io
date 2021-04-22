@@ -15,7 +15,6 @@ function fourAC(a, c){
 
 function almightyFormula(a, b, c) {
     const bSquare = Math.pow(b, 2)
-    const twoA = 2 * a
     const fAC = fourAC(a, c)
 
     return  ( -b + Math.sqrt(bSquare - fAC) ) / ( 2 * a )
@@ -43,4 +42,25 @@ function changeAnchorTitle(position, newTitle){
     getAnchorAtPosition.setAttribute("title", newTitle)
     console.log(`The new title is: ${getAnchorAtPosition.getAttribute("title")}`) // after we change
     console.log( getAnchorAtPosition )
+}
+
+function allAnchorTagsTitles(){
+    console.log( document.getElementsByTagName("a")) 
+}
+
+function getAllImages(){
+
+    let images = document.getElementsByTagName("img")
+    let imagesLink = []
+    for(let i = 0; i < images.length; i++){
+        let imageElement = images[i]
+//	console.log(imageElement) 
+        let imageSource = imageElement.getAttribute("src")
+// 		console.log(imageSource) 
+
+
+         imagesLink.push(imageSource)
+    }
+
+    return imagesLink
 }
