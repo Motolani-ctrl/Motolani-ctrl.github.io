@@ -1,4 +1,4 @@
-function two() 
+ function two() 
 {
     console.log("2")
 }
